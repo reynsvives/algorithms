@@ -1,0 +1,47 @@
+/**
+4. Bepaal de logische ontkenning van volgende logische uitdrukkingen.
+a) not C1 and C2
+b) C1 and C2 and C3
+c) C1 or not (C2 and C3)
+d) (not C1 or C2) or not C3
+e) not C1 and (C2 or not C3)
+f) not (C1 or not C2) and (not C3 or C4)
+*/
+
+a) !(!C1 and C2)
+        ==> !(!C1) or !C2
+        ==> C1 or !C2
+
+b) !(C1 and C2 and C3)
+        ==>!((C1 and C2) and C3)
+        ==>!(C1 and C2) or !C3
+        ==>!C1 or !C2 or !C3
+
+c) !(C1 or !(C2 and C3))
+        ==>!C1 and !(!C2 or !C3)
+        ==>!C1 and !(!C2) and !(!C3)
+        ==>!C1 and C2 and C3
+
+d) !((!C1 or C2) or !C3)
+      ==>!(!C1 or C2) and !(!C3)
+      ==>C1 and !C2 and C3
+
+e) !(!C1 and (C2 or !C3))
+      ==>!(!C1) or !(C2 or !C3)
+      ==>C1 or !C2 and C3
+
+f) !(
+    !(C1 or !C2)
+    and
+    (!C3 or C4)
+    )
+
+      ==>!(
+          !C1 and C2
+          and
+          (!C3 or C4)
+          )
+
+      ==>!(!C1 and C2) or !((!C3 or C4))
+      ==>C1 or !C2 or C3 and !C4
+          

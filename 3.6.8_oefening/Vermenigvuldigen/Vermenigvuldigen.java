@@ -20,10 +20,19 @@ public class Vermenigvuldigen
         int[] multiplicatoren = new int[]{1,2, 3, 4, 5, 6, 7, 8, 9, 10}; //Reeks multiplicatoren van 1 t.e.m. 10
         int i; //loopvariabele
 
-        //Getal vragen aan een gebruiker
+        //Getal tussen 1 en 10 vragen aan een gebruiker
         
-        System.out.println("Geef een getal: ");
+        System.out.println("Geef een getal tussen 1 en 10: ");
+      
+        //Eerste poging gebruiker
         getal = sc.nextInt();
+        
+        while(getal <1 || getal >10)
+        {
+            System.out.println("Het getal ligt niet tussen 1 en 10");
+            getal = sc.nextInt();
+        }
+        
         
         //Tafels van vermenigvuldiging berekenen
         
